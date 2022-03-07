@@ -1,3 +1,5 @@
+CREATE DATABASE db_geeks;
+
 CREATE TABLE result_sum(
     id SERIAL PRIMARY KEY,
     result INT,
