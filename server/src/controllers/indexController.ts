@@ -3,10 +3,6 @@ import pool from '../db';
 
 class IndexController {
 
-    public index(req: Request, res: Response) {
-        res.json({text: 'API is in /api/games'});
-    }
-
     public async create(req: Request, res: Response): Promise<object> {
         let value1 = req.body.value1;
         let value2 = req.body.value2;
@@ -27,6 +23,8 @@ class IndexController {
             a=b;
             b=c;
         }
+        const games = await pool.query('SELECT * FROM result_sum');
+        console.log(games);
         return res.json({ fibonacci: bol, result: result });
     }
 
