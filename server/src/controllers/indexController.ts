@@ -13,6 +13,7 @@ class IndexController {
         for(let i = 6; i <= result; i++){
             fibo.push(fibo[i-1] + fibo[i-2]);
         }
+        pool.query('INSERT INTO result_sum(result, value1, value2) VALUES($1, $2, $3))', [result, value1, value2])
         let fibonacci = fibo.includes(result);
         return res.json({ fibonacci: fibonacci, result: result });
     }
