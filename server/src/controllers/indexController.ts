@@ -17,7 +17,6 @@ class IndexController {
         let fibonacci = fibo.includes(result);
         return res.json({ fibonacci: fibonacci, result: result });
     }
-
 }
 
 export const indexController = new IndexController;
