@@ -32,7 +32,7 @@ function App() {
 
   return (
     <Card style={{ width: '30rem', margin: '50px auto', padding: '20px' }}>
-      <Alert><p>Result:{result}</p><p>it's in fibonacci: {fibonacci ? 'si' : 'no'}</p></Alert>
+      <Alert><p>Result:{result}</p><p>it's in fibonacci secuence: {fibonacci ? 'si' : 'no'}</p></Alert>
       <form onSubmit={onSubmitForm}>
         <FloatingLabel
           controlId="floatingInput"
